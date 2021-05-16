@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="364dp"
+            android:rotation="180"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/izquierda"
+            android:layout_width="202dp"
+            android:layout_height="175dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <Constraint
+            android:id="@+id/derecha"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
+
+        <Constraint
+            android:id="@+id/layoutpp"
+            android:alpha="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dial"/>
+        <Constraint
+            android:layout_height="175dp"
+            app:layout_editor_absoluteX="-82dp"
+            android:layout_width="202dp"
+            android:id="@+id/dializquierda"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:id="@+id/dialderecha"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/dial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:rotation="0"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/dializquierda"
+            android:layout_width="202dp"
+            android:layout_height="175dp"
+            android:layout_marginTop="148dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/dialderecha"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="184dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Constraint
+            android:id="@+id/layoutpp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dial"
+            />
+
+    </ConstraintSet>
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:duration="9000"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start" >
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/dializquierda"
+                app:framePosition="0"
+                android:rotation="45" />
+            <KeyAttribute
+                app:motionTarget="@+id/dializquierda"
+                app:framePosition="10"
+                android:rotation="0" />
+            <KeyAttribute
+                app:motionTarget="@+id/dializquierda"
+                app:framePosition="70"
+                android:rotation="180" />
+
+            <KeyAttribute
+                app:motionTarget="@+id/dialderecha"
+                app:framePosition="0"
+                android:rotation="45" />
+            <KeyAttribute
+                app:motionTarget="@+id/dialderecha"
+                app:framePosition="10"
+                android:rotation="0"/>
+            <KeyAttribute
+                app:motionTarget="@+id/dialderecha"
+                app:framePosition="70"
+                android:rotation="180"/>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

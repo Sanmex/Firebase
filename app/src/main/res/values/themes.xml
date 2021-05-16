@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Firebase" parent="Theme.MaterialComponents.Light.NoActionBar" >
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/bacgroundEnd</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryLigthColor</item>
+        <item name="colorOnSecondary">@color/secondaryDarkColor</item>
+        <item name="android:textColor" >@color/bacgroundEnd</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+      </style>
+        <style name="TextAppearance" parent="TextAppearance.AppCompat">
+          <item name="android:textSize">20sp</item>
+          <item name="android:singleLine">true</item>
+          <item name="android:textStyle">bold</item>
+          <item name="android:fontFamily">@font/cour</item>
+          <item name="android:textColor">@color/primaryDarkColor</item>
+      </style>
+      <style name="Cut" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">12dp</item>
+      </style>
+
+
+
+
+      <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+      </style>
+
+    <style name="Boton" parent="Theme.Firebase">
+        <item name="android:background">@drawable/redondo</item>
+
+    </style>
+
+
+
+
+
+
+
+
+</resources>

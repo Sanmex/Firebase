@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.firebase.ui.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_portada"
+            app:destination="@id/portada" />
+    </fragment>
+    <fragment
+        android:id="@+id/portada"
+        android:name="com.example.firebase.ui.Portada"
+        android:label="fragment_portada"
+        tools:layout="@layout/fragment_portada" >
+        <action
+            android:id="@+id/action_portada_to_listaContactos"
+            app:destination="@id/listaContactos" />
+        <action
+            android:id="@+id/action_portada_to_listaCitas"
+            app:destination="@id/listaCitas" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaContactos"
+        android:name="com.example.firebase.ui.ListaContactos"
+        android:label="fragment_lista_contactos"
+        tools:layout="@layout/fragment_lista_contactos" >
+        <action
+            android:id="@+id/action_listaContactos_to_registro"
+            app:destination="@id/registro" />
+        <action
+            android:id="@+id/action_listaContactos_to_citasPick"
+            app:destination="@id/citasPick" />
+        <action
+            android:id="@+id/action_listaContactos_to_editarContact"
+            app:destination="@id/editarContact" />
+        <action
+            android:id="@+id/action_listaContactos_to_listaCitas"
+            app:destination="@id/listaCitas" />
+    </fragment>
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.firebase.ui.Registro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registro_to_listaContactos"
+            app:destination="@id/listaContactos" />
+    </fragment>
+    <fragment
+        android:id="@+id/citasPick"
+        android:name="com.example.firebase.ui.CitasPick"
+        android:label="fragment_citas_pick"
+        tools:layout="@layout/fragment_citas_pick" >
+        <argument
+            android:name="currentCont"
+            app:argType="com.example.firebase.model.Contacto" />
+        <action
+            android:id="@+id/action_citasPick_to_listaCitas"
+            app:destination="@id/listaCitas" />
+    </fragment>
+    <fragment
+        android:id="@+id/editarContact"
+        android:name="com.example.firebase.ui.EditarContact"
+        android:label="fragment_editar_contact"
+        tools:layout="@layout/fragment_editar_contact" >
+        <action
+            android:id="@+id/action_editarContact_to_listaContactos"
+            app:destination="@id/listaContactos" />
+        <action
+            android:id="@+id/action_editarContact_to_listaCitas"
+            app:destination="@id/listaCitas" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.firebase.model.Contacto" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaCitas"
+        android:name="com.example.firebase.ui.ListaCitas"
+        android:label="fragment_lista_citas"
+        tools:layout="@layout/fragment_lista_citas" >
+        <action
+            android:id="@+id/action_listaCitas_to_maps"
+            app:destination="@id/maps" />
+        <action
+            android:id="@+id/action_listaCitas_to_citasPick"
+            app:destination="@id/citasPick" />
+    </fragment>
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.example.firebase.ui.Maps"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>

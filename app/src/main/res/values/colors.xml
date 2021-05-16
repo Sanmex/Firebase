@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#2fce9a</color>
+    <color name="primaryLightColor">#2cda9d</color>
+    <color name="primaryDarkColor">#31c397</color>
+    <color name="secondaryColor">#36ac92</color>
+    <color name="secondaryLigthColor">#34b794</color>
+    <color name="secondaryDarkColor">#39a08f</color>
+    <color name="backgroundSrart">#474b63</color>
+    <color name="backgroundSrartcl">#f0474b63</color>
+    <color name="bacgroundEnd">#353a4d</color>
+    <color name="black">#000000</color>
+
+</resources>
